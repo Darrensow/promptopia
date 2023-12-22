@@ -48,10 +48,19 @@ const Feed = () => {
           className='search_input peer' />
       </form>
 
-      <PromptCardList
+      <div className='mt-16 prompt_layout'>
+      {posts.map((post) => (
+        <PromptCard
+          key={post._id}
+          post={post}
+          
+        />
+      ))}
+    </div>
+      {/* <PromptCardList
         data={posts}
         handleTagClick={() => {}} 
-      />
+      /> */}
     </section>
   )
 }
